@@ -17,7 +17,7 @@ public class LightChanger : MonoBehaviour
         ChangeLightColor(Color.green);
         //ChangeLightColor(Color.blue); 
         //ChangeLightColor(Color.blue);
-       // this.gameObject.SetActive(isItorIsntIt);
+        // this.gameObject.SetActive(isItorIsntIt);
         lightWeWantToChange.gameObject.SetActive(false);
 
         //Destroy(lightWeWantToChange.gameObject); //This is how you destroy an obejct!

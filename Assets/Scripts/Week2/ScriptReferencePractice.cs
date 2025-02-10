@@ -11,12 +11,12 @@ public class ScriptReferencePractice : MonoBehaviour
         wrigglersController.scaleIncrease = 5f;
         wrigglersController.RotateWrigglers();
         wrigglersController.RotateWrigglers();
-          
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
