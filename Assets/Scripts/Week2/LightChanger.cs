@@ -68,27 +68,57 @@ public class LightChanger : MonoBehaviour
     {
         lightWeWantToChange.color = santaClaus;
 
+        if (lightWeWantToChange.color == Color.green)
+        {
+            lightWeWantToChange.intensity = 100f;
+        }
+        else if (lightWeWantToChange.color == Color.red)
+        {
+            lightWeWantToChange.transform.position += Vector3.right * 3;
+        }
+        else if (lightWeWantToChange.color == Color.blue)
+        {
+            lightWeWantToChange.gameObject.SetActive(false);
+        }
+        else //none of the condition above were met, so do this if it's anything other than green, red or blue.
+        {
+            if (lightWeWantToChange.transform.position == Vector3.zero) ;
+        }
+        if (lightWeWantToChange.color == Color.green || lightWeWantToChange.color == Color.red)
+        {
+            //If the color is green or red, it will run this code
+        }
+
+        if (lightWeWantToChange.color == Color.blue && lightWeWantToChange.intensity > 50f)
+        {
+            //if the color is blue AND the intensity is greaster than 50, it will run this code
+        }
+        if (lightWeWantToChange.color == Color.white || (lightWeWantToChange.color == Color.black && lightWeWantToChange.intensity <= 25f))
+        {
+            // if the color is whuite OR the color is both black and its intensity is less than or greater than 25, it will run this code
+        }
+
     }
 
-    private void OnEnable()
-    {
-        //When this is set active again from inactive, it will call the code
-        //in this function.
-    }
+        private void OnEnable()
+        {
+            //When this is set active again from inactive, it will call the code
+            //in this function.
+        }
 
-    private void OnDisable()
-    {
-        //When this object is disabled, run the code in here before it is disabled.
-    }
+        private void OnDisable()
+        {
+            //When this object is disabled, run the code in here before it is disabled.
+        }
 
-    private void Awake()
-    {
-        //Is called before the start.
-    }
+        private void Awake()
+        {
+            //Is called before the start.
+        }
 
-    private void OnDestroy()
-    {
-        //This is called when an object is going to be destroyed before it iis finished 
-        //being destroyed
+        private void OnDestroy()
+        {
+            //This is called when an object is going to be destroyed before it iis finished 
+            //being destroyed
+        }
     }
-}
