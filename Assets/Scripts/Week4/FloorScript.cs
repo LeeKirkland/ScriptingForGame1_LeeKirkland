@@ -16,7 +16,6 @@ public class FloorScript : MonoBehaviour
 
     public void SayHello()
     {
-        Debug.Log(otherObject.gameObject.name);
-        if (otherObject.gameObject.tag == "floor");
+        Debug.Log("Hello!");
    }
 }

@@ -33,4 +33,8 @@ public class CannonBall : MonoBehaviour
         this.gameObject.GetComponent<MeshRenderer>().material.color = Color.magenta;
          
     }
+    private void OnTriggerExit(Collider other)
+    {
+        this.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+    }
 }
