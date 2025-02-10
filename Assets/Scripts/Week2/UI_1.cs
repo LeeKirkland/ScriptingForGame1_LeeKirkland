@@ -25,11 +25,7 @@ public class UI_1 : MonoBehaviour
             youDiedScreen.SetActive(true);
 
         }
-<<<<<<< HEAD
 
-=======
-        if youDiedScreen.SetActive(true);
->>>>>>> ad9c0eae749a6b474d8d18f048dafed820ec035c
     }
     public void ResetWrigglers()
     {
