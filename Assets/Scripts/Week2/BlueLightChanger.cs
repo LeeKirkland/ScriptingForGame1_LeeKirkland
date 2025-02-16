@@ -1,23 +1,25 @@
 using UnityEngine;
 
-public class ScriptReferencePractice : MonoBehaviour
+public class BLueLightChanger : MonoBehaviour
 {
-    public UI_1 wrigglersController;
-
+    public Light BlueLight;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        wrigglersController.scaleIncrease = 5f;
-        wrigglersController.RotateWrigglers();
-        wrigglersController.RotateWrigglers();
-
+   
     }
 
+
+   public void StartButton()
+    {
+        ChangeLightColor(Color.blue);
+
+    }
     // Update is called once per frame
     void Update()
     {
-   AdjustLight();
+          AdjustLight();
         Debug.Log("LightObject has been Adjusted");
 
         if (Input.GetKeyDown(KeyCode.A))
