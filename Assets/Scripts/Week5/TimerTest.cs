@@ -7,10 +7,14 @@ public class TimerTest : MonoBehaviour
 
     public bool hasFinishedTimer = false;
 
-    public GameObject cube; 
+    public GameObject cube;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        timerMaxDuration = Random.Range(1, 5);    //because we want it to go between one 1 , 4
+                                                  //if u put an f after it will return a decimal. if you do NOT it will return a while number friom the first nuumber to the last not including the 
+                                                  //last number. if 1f and 4f it will return a number between 1 and 4 
+
         Invoke("moveCubeRight", timerMaxDuration); //is going to move cube right AFTER timer max duration (3 seconds)
     }
 
@@ -52,6 +56,11 @@ public class TimerTest : MonoBehaviour
     void MoveCubeRight()
     {
         cube.transform.position += Vector3.right;
+
+        if (cube.transform.transform.position.x < 10)    //makes it so the cube only moves when it is less than 10 on the x axis (calling based on position so it doesnt go forever(end condition))
+        {
+            Invoke("MoveCubeRight", timerMaxDuration);    //going to call itself AGAIN after 3 seconds (is going to do it forever)
+        }
     }
 
 }
