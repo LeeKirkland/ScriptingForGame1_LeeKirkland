@@ -19,7 +19,7 @@ public class InstantiateTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))  //if we are hilding down teh space key...
+        if (Input.GetKey(KeyCode.Space))  //if we are holding down the space key...
         {
             Instantiate(cannonBallPrefab, CannonBallSpawnposition.transform.position, Quaternion.identity);
 
