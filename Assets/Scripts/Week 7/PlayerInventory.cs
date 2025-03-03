@@ -24,7 +24,7 @@ public class PlayerInventory : MonoBehaviour           //concept of having a tri
         if(Input.GetKeyDown(KeyCode.E))
         {
             //are we looking at the door
-            RaycastHit hitObject;  //this cariable containes the data of what will be hit by the raycast
+            RaycastHit hitObject;  //this variable containes the data of what will be hit by the raycast
 
             if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hitObject, 10f))  //looks in front of us 
             {
