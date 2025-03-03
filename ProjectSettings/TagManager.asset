@@ -8,6 +8,8 @@ TagManager:
   - NotCoolGuy
   - CannonBall
   - floor
+  - Toad
+  - plane
   layers:
   - Default
   - TransparentFX
