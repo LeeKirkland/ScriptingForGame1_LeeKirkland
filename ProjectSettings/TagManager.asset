@@ -10,6 +10,8 @@ TagManager:
   - floor
   - Toad
   - plane
+  - Key
+  - Door
   layers:
   - Default
   - TransparentFX
