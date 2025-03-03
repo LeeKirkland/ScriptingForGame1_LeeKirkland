@@ -23,26 +23,16 @@ public class ToadController : MonoBehaviour
         rbody = GetComponent<Rigidbody>();
     }
 
-    public void Movement()
+    private void OnCollisionEnter(Collision collision)
     {
-        Vector3 direction = Vector3.zero;
-        direction.x = Random.Range(-1f, 1f);
-        direction.y = Random.Range(-1f, 1f);
-        this.gameObject.GetComponent<Rigidbody>().AddForce(direction * 15f);
-        
-
-        Debug.Log("This is working");
-
-    }
-
-    public void OnCollisionEnter(Collision plane)
-    {
-       if(plane.gameObject.tag == "plane" )
+        if (collision.gameObject.tag == "plane")
         {
-            Movement();
+            moveDirection.x = Random.Range(-1f, 1f);
+            moveDirection.y = Random.Range(-1f, 1f);
 
         }
     }
+    //make top and bottom and side wall collision  top and bottom multiply y by -1 ansd sides multiply x by -1
 
      void Update()
     {
