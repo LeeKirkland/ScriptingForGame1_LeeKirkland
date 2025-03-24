@@ -17,6 +17,12 @@ public class StartButton : MonoBehaviour
 
           Debug.Log("Light is off");
 
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.A))
         {
             lightToToggle1.color = Color.green;
@@ -32,12 +38,6 @@ public class StartButton : MonoBehaviour
 
             Debug.Log("lights changed again");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-   
 
 
     }
@@ -46,6 +46,12 @@ public class StartButton : MonoBehaviour
     {
         lightToToggle1.enabled = true;
         lightToToggle2.enabled = true;
+       
+        if(lightToToggle1.enabled == true && lightToToggle2.enabled == true)
+        {
+            startButton.SetActive(false);
+        }
+  
 
     }
 }

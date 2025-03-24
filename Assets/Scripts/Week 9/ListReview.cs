@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+
 
 public class ListReview : MonoBehaviour
 { 
@@ -7,8 +9,8 @@ public class ListReview : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        cubes[0].SetActive(false);
-        cubes[cubes.count -1]
+        cubes[0].SetActive(false);      //first cube in the list 
+        cubes[cubes.Count - 1].SetActive(false);       //last cube in the list
 
             foreach(GameObject c in cubes)      //iteratesd though all objects in the list called "cubes". when in the for each loop the individual element will be referenced as "c"
         {

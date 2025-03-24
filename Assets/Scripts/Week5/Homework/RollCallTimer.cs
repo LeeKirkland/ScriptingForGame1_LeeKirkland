@@ -14,8 +14,9 @@ public class RollCallTimer : MonoBehaviour
 
     public GameObject endScreen;
 
-    public TextMeshProUGUI TotalCountText;
+    public GameObject CounterText;
 
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,14 +32,14 @@ public class RollCallTimer : MonoBehaviour
         {
             if (timer > 0)
             {
-                timer -=Time.deltaTime;
+                timer -= Time.deltaTime;
             }
-            else 
+            else
             {
-                hasTimerFinished = true;
-                counterScript.allowCounting = false;
+                hasTimerFinished = (true);
+                counterScript.allowCounting = (true);
                 endScreen.SetActive(true);
-                TotalCountText.gameObject.SetActive(true);
+                CounterText.gameObject.SetActive(true);
                 timer = 0f;
             }
 
