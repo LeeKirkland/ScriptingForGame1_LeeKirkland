@@ -37,8 +37,7 @@ public class RandomSpawner : MonoBehaviour
         Vector3 spawnPosition = new Vector3(randomX, randomY, randomZ);
 
        
-        /*GameObject spawnedObject = Instantiate(toadPreFab, spawnPosition, Quaternion.identity);
-        */
+ 
         GameObject spawnedObject = Instantiate(toadPreFab, spawnPosition, toadPreFab.transform.rotation);
 
 
