@@ -16,22 +16,17 @@ public class AllToads : MonoBehaviour
         for (int i = 0; i < toadCount; i++)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-80f, 87.99f), Random.Range(-42.3f, 41.73f), 37.52822f);
-
             GameObject toad = Instantiate(toadPreFab, spawnPosition, toadPreFab.transform.rotation);
-
             Debug.Log(toadCount);
         }
-
         toads = FindObjectsByType<ToadController>(FindObjectsSortMode.None).ToList();
     }
-
        private void Update()
         {
             foreach(ToadController toad in toads)
             {
                 toad.Direction();
                 toad.Disappear();
-
                 Debug.Log("Working");
             }
         }

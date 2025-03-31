@@ -12,7 +12,6 @@ public class ToadController : MonoBehaviour
     public bool isToadGone = true;
 
     void Start()
-
     {
         randomTime = Random.Range(5f, 10f);
     }
@@ -22,12 +21,8 @@ public class ToadController : MonoBehaviour
         Vector3 moveDirection = Vector3.zero;
         moveDirection.x = Random.Range(-1f, 1f);
         moveDirection.y = Random.Range(-1f, 1f);
-
-
         this.gameObject.GetComponent<Rigidbody>().AddForce(moveDirection * 150f);
-
         Debug.Log("playing");
-
     }
 
     public void Disappear()
@@ -64,11 +59,11 @@ public class ToadController : MonoBehaviour
             }
         }
     }
-    //make top and bottom and side wall collision  top and bottom multiply y by -1 ansd sides multiply x by -1
+   
 
    private void Update()
     {
-       /* rbody.AddForce(moveDirection * speed * Time.deltaTime); */
+      
     }
 
   

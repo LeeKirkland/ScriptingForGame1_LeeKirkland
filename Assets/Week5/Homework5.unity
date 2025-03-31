@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b092e51d11b592b4c88cf90b0e500956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 3
+  timer: 30
   TimerText: {fileID: 1797885073}
   hasTimerFinished: 0
   counterScript: {fileID: 143050091}

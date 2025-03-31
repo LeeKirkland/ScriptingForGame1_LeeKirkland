@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RollCallTimer : MonoBehaviour
 {
-    public float timer = 3f;
+    public float timer = 30f;
 
     public TextMeshProUGUI TimerText;
 
