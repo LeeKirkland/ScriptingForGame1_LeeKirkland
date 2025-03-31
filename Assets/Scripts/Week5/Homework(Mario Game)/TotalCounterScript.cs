@@ -8,10 +8,10 @@ public class TotalCounterScript : MonoBehaviour
 {
 
     public List<GameObject> enemies = new List<GameObject>();
-    public int numEnemies;          //use this to check if you have proper amnt at end\
+    public int numEnemies;          //use this to check if you have proper amnt at end
     public TextMeshProUGUI TotalCountText;
     public GameObject enemyPreFab;
-    
+    public AllToads AllToads;
 
 
   
@@ -31,12 +31,12 @@ public class TotalCounterScript : MonoBehaviour
     void Update()
     {
         //if time runs out we will call check player answer
-        // CheckPlayerAnswer();
+         CheckPlayerAnswer();
     }
 
-    /*  void CheckPlayerAnswer()
+      void CheckPlayerAnswer()
       {
-          if (numEnemies == TotalCounterScript.counter)
+          if (numEnemies == AllToads.toadCount)
           {
               Debug.Log("You Win!");
           }
@@ -44,5 +44,5 @@ public class TotalCounterScript : MonoBehaviour
           {
               Debug.Log("You Lose!");
           }
-       }*/
+       }
 }

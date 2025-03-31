@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1439564856204684838}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2287, y: 1047.7501, z: 239}
+  m_LocalPosition: {x: 2287.08, y: 1047.7501, z: 239}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,11 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0154f10ec998d184e97021a682db873e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalTime: 10
+  randomTime: 0
   spawnCountText: {fileID: 0}
-  rbody: {fileID: 0}
-  moveDirection: {x: 0, y: 0, z: 0}
-  speed: 0
+  isToadBack: 0
+  isToadGone: 1
 --- !u!65 &7052513047344485199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -150,8 +149,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1

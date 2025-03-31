@@ -5,15 +5,15 @@ using UnityEngine;
 public class AllToads : MonoBehaviour
 {
     public List<ToadController> toads = new List<ToadController>();
-
+    public int toadCount;
     public GameObject toadPreFab;
-
+    public ToadController toadScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        int toadCount = Random.Range(20, 40);
-        for (int i = 0; i < toadCount; i++) 
+        toadCount = Random.Range(20, 40);
+        for (int i = 0; i < toadCount; i++)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(-80f, 87.99f), Random.Range(-42.3f, 41.73f), 37.52822f);
 
@@ -23,6 +23,18 @@ public class AllToads : MonoBehaviour
         }
 
         toads = FindObjectsByType<ToadController>(FindObjectsSortMode.None).ToList();
+    }
+
+       private void Update()
+        {
+            foreach(ToadController toad in toads)
+            {
+                toad.Direction();
+                toad.Disappear();
+
+                Debug.Log("Working");
+            }
+        }
 
 
 
@@ -47,4 +59,4 @@ public class AllToads : MonoBehaviour
         }
     }
    */
-}
+

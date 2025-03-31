@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RollCallTimer : MonoBehaviour
 {
-    public float timer = 30f;
+    public float timer = 3f;
 
     public TextMeshProUGUI TimerText;
 
@@ -14,14 +14,15 @@ public class RollCallTimer : MonoBehaviour
 
     public GameObject endScreen;
 
-    public GameObject CounterText;
+    public TextMeshProUGUI counterText;
 
-   
+    public AllToads AllToads;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -38,13 +39,18 @@ public class RollCallTimer : MonoBehaviour
             {
                 hasTimerFinished = (true);
                 counterScript.allowCounting = (true);
-                endScreen.SetActive(true);
-                CounterText.gameObject.SetActive(true);
+                EndScreen();
                 timer = 0f;
             }
 
             TimerText.text = Mathf.Ceil(timer).ToString("F0");
         }
 
+    }
+    private void EndScreen()
+    {
+        endScreen.SetActive(true);
+        Debug.Log("End Screen Pop Up");
+        counterText.text = "Total Count: " + AllToads.toadCount.ToString();
     }
 }
