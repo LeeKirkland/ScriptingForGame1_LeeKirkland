@@ -12,6 +12,7 @@ TagManager:
   - plane
   - Key
   - Door
+  - VisionCone
   layers:
   - Default
   - TransparentFX

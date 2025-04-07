@@ -8,7 +8,7 @@ public class RangedEnemy : Enemy
 
     public float projectileForce = 500f;
 
-    protected override void Attack()        //when atk is called shoot projectile twoards player
+    protected override void Attack()        //when atk is called shoot projectile towards player
     {
        GameObject go =  Instantiate(projectilePreFab, projectileSpawnPosition.position, projectileSpawnPosition.rotation);
 
@@ -18,9 +18,9 @@ public class RangedEnemy : Enemy
 
 
     //function to make it face the player
-    protected override void Update()
+ protected override void Update()
     {
-        this.transform.LookAt(player.transform.position);
+       // this.transform.LookAt(player.transform.position);
         base.Update();
 
     }
