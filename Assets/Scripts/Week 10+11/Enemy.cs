@@ -87,6 +87,10 @@ public class Enemy : MonoBehaviour
                         attackTimer = 0;//reset timer
                     }
                 }
+                else
+                {
+                    navAgent.isStopped = false;
+                }
             }
         }
         else//if the player has     NOT been seen 
