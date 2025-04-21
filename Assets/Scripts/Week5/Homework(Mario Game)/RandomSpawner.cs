@@ -19,7 +19,6 @@ public class RandomSpawner : MonoBehaviour
         {
             SpawnPrefab();
         }
-        
     }
 
     // Update is called once per frame
