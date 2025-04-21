@@ -6,21 +6,25 @@ public class Bouncing : MonoBehaviour
     float moveY;
     public float speed = 5f;
     private float moveDir;
+    private Vector3 randomDirection;
     
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
+        randomDirection = new Vector3(Random.Range(-9.81f, 4.71f), Random.Range(10.14f, 4.71f), Random.Range(1f, 1f)).normalized;
+
         moveX = Random.Range(1f, 2f);
         moveY = Random.Range(1f, 2f);
     }
  
-    // Update is called once per frame
+
     void Update()
     {
-        ;// transform.position += direction * speed;
+        transform.Translate(randomDirection * speed * Time.deltaTime);
 
-        this.transform.position += new Vector3(moveX, moveY, 0) * speed * Time.deltaTime;
+        // transform.position += direction * speed;
+       // this.transform.position += new Vector3(moveX, moveY, 0) * speed * Time.deltaTime;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

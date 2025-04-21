@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+
+    public float moveSpeed = 5f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
