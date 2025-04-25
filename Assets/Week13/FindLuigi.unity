@@ -407,14 +407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf75e1bd38919ea44a19589593b13fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PacmanSprite: {fileID: 331649902}
-  Ghost1Sprite: {fileID: 1324610306}
-  Ghost2Sprite: {fileID: 0}
-  Ghost3Sprite: {fileID: 1738143551}
-  minSpawn: 1
-  maxSpawn: 20
-  SpriteBackground: {fileID: 1005883878}
-  SpritePosition: {fileID: 770039091}
+  ghostPrefab: {fileID: 0}
+  numberToSpawn: 5
+  spawnRadius: 10
 --- !u!1 &770039090
 GameObject:
   m_ObjectHideFlags: 0
@@ -463,14 +458,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf75e1bd38919ea44a19589593b13fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PacmanSprite: {fileID: 789814714}
-  Ghost1Sprite: {fileID: 0}
-  Ghost2Sprite: {fileID: 0}
-  Ghost3Sprite: {fileID: 0}
-  minSpawn: 1
-  maxSpawn: 10
-  SpriteBackground: {fileID: 0}
-  SpritePosition: {fileID: 0}
+  ghostPrefab: {fileID: 789814714}
+  numberToSpawn: 5
+  spawnRadius: 10
 --- !u!1 &793412516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1153,14 +1143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf75e1bd38919ea44a19589593b13fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PacmanSprite: {fileID: 1324610306}
-  Ghost1Sprite: {fileID: 1324610306}
-  Ghost2Sprite: {fileID: 789814714}
-  Ghost3Sprite: {fileID: 1738143551}
-  minSpawn: 1
-  maxSpawn: 10
-  SpriteBackground: {fileID: 0}
-  SpritePosition: {fileID: 0}
+  ghostPrefab: {fileID: 1324610306}
+  numberToSpawn: 5
+  spawnRadius: 10
 --- !u!1 &1347489807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,9 +1481,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5729962090494016401, guid: f2c0890136ec81d478a110a9f0b9e69f, type: 3}
+      propertyPath: ghostPrefab
+      value: 
+      objectReference: {fileID: 1738143551}
+    - target: {fileID: 5729962090494016401, guid: f2c0890136ec81d478a110a9f0b9e69f, type: 3}
       propertyPath: PacmanSprite
       value: 
       objectReference: {fileID: 1738143551}
+    - target: {fileID: 5729962090494016401, guid: f2c0890136ec81d478a110a9f0b9e69f, type: 3}
+      propertyPath: numberToSpawn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
