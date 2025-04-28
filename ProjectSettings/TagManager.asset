@@ -13,6 +13,7 @@ TagManager:
   - Key
   - Door
   - VisionCone
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - IgnoreNavObsticle
   - Water
   - UI
-  - 
+  - Pacman
   - 
   - 
   - 
